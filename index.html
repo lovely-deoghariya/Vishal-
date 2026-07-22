@@ -10,31 +10,104 @@
 
 <body>
 
-<div class="hearts"></div>
+<div class="container">
 
-<section class="page active" id="page1">
+<div class="card" id="card">
 
 <h1>🎂 Happy Birthday</h1>
 
 <h2>My Sweetheart ❤️</h2>
 
-<p>
+<p id="text">
 Aaj ka din mere liye bahut hi special hai,
-kyunki aaj mere sabse pyare insaan ka birthday hai. 🥹❤️
+kyunki aaj mere sabse pyare insaan ka birthday hai. ❤️🥹
 </p>
 
+<button onclick="nextCard()">Open My Surprise 🎁</button>
+
+</div>
+
+</div>
+
+<script>
+
+let page=0;
+
+const pages=[
+
+`<h2>💌 Shayari 1</h2>
 <p>
-Maine aapke liye ek chhota sa surprise banaya hai...
-Umeed hai aapko pasand aayega. 💖
+Teri muskaan meri pehchaan hai,<br>
+Aapka saath meri jaan hai,<br>
+Rab se bas itni si dua hai,<br>
+Har janam me aap hi meri shaan hain. ❤️
+</p>`,
+
+`<h2>💌 Shayari 2</h2>
+<p>
+Na chaand ki chahat,<br>
+Na sitaron ki farmaish,<br>
+Bas har pal aapka saath mile,<br>
+Yahi meri khwaish. ❤️
+</p>`,
+
+`<h2>💌 Shayari 3</h2>
+<p>
+Aap paas hote hain to har pal haseen lagta hai,<br>
+Aapke bina sab kuch adhura lagta hai,<br>
+Har dua me bas aapka naam aata hai. 💖
+</p>`,
+
+`<h2>💌 Shayari 4</h2>
+<p>
+Dil ki kitaab me gulaab aapka tha,<br>
+Har khwaab me chehra aapka tha,<br>
+Meri har khushi ki wajah sirf aap hain. ❤️
+</p>`,
+
+`<h2>💌 Shayari 5</h2>
+<p>
+Mohabbat ka koi hisaab nahi hota,<br>
+Har kisi ka apna khwaab nahi hota,<br>
+Jo dil se rishta nibha de,<br>
+Waisa har baar nahi milta. 🌹
+</p>`,
+
+`<h2>💌 Shayari 6</h2>
+<p>
+Har dhadkan me aapka naam rehta hai,<br>
+Har khushi me aapka ehsaas rehta hai,<br>
+Chahe kitni bhi dooriyan ho,<br>
+Dil me hamesha aapka ghar rehta hai. ❤️
+</p>`,
+
+`<h2>💌 Shayari 7</h2>
+<p>
+Na koi vaada chahiye,<br>
+Na koi kasam chahiye,<br>
+Bas zindagi bhar aapka saath mile,<br>
+Aur kuch nahi chahiye. 🥹❤️
 </p>
 
-<button onclick="nextPage()">
-🎁 Open My Surprise
-</button>
+<button onclick="alert('Part 2 me 7 Cute Chutkule ❤️')">
+Next ➜
+</button>`
 
-</section>
+];
 
-<script src="script.js"></script>
+function nextCard(){
+
+if(page<pages.length){
+
+document.getElementById("card").innerHTML=pages[page];
+
+page++;
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
